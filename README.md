@@ -136,7 +136,7 @@ To register a customer for loyalty, utilize a `POST` to the [v1/Customers](http:
  ## (Advanced) Campaign Specific Actions
  If your point of sale has it's own marketing strategy, but you would like to utilize the same notification and offers Monetary's automated campaigns generate,  you can also utilize the monetary Campaign endpoint. These endpoints create manual campaigns. Manual campaigns are ways to deliver offers (coupons, discounts, etc) to registered customers via POST to the Campaigns/Offers. Follow these easy steps to create and send offers to registered customers:
  
- ### Step 1) Create a Manual Campaign
+ ### 1. Create a Manual Campaign
  Submit a payload describing the offer you would like to send to registered customers. There are two endpoints that take and respond with the same payload:
  ##### Campaigns/Location
  Post here if you want an offer to only be used at a single location in a franchise/marketing group. It also Limits offers to only registered customers who have made a purchase at the location specified by the api key.
@@ -163,7 +163,7 @@ To register a customer for loyalty, utilize a `POST` to the [v1/Customers](http:
   "IsLocationSpecific": true
 }
  ```
- ### Step 2) Submit Customer List to Generate Offers
+ ### 2. Submit Customer List to Generate Offers
  once you have the CampaignID, you can utilise the `Campaigns/{CampaignID}/Offers` endpoint to submit a list of CustomerID identifiers for the registered customers who should receive the offer:
  #### Example Request
  ```
