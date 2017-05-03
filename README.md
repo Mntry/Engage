@@ -10,7 +10,7 @@ In the walkthrough below, we will cover how to authorize an API call to the Enga
 
 ### 1. Common Headers
 
-Every requestion requires two headers:
+Every request requires two headers:
 #### Authorization
 is easy, just insert your secret key in the Authorization header:
 
@@ -103,16 +103,13 @@ To register a customer for loyalty, utilize a `POST` to the [v1/Customers](http:
  ```
  ### Marketing!
  
- If you have integrated these points, you have provided enough information Monetary to provide highly detailed, adaptive marketing functionality. For more information skip ahead to the [appendix](#apendx) to see more actions our api can take, such as finding existing Customers, reviewing generated offers, etc!
+ If you have integrated these points, you have provided enough information Monetary to provide highly detailed, adaptive marketing functionality. For more information skip ahead to the [appendix](#apendx) to see more actions our API can take, such as finding existing Customers, reviewing generated offers, etcetera!
  
  ### (Advanced) Campaign Creation
- If your Point of Sale already has marketing and loyalty type functionality, but your customer base would like to send your offers (coupons, discounts, free item codes, etc) via the Monetary Notification Platoform, you can configure a Monetary Campaign. Monetary campaigns will submit an offer via SMS, Email, and/or App directly to the registered customer!
- 
- I the steps below, we will [TO E WRITTEN LATER!]
- 
+ If your Point of Sale already has marketing and loyalty type functionality, but your customer base would like to send your offers (coupons, discounts, free item codes, etc) via the Monetary Notification Platform, you can configure a Monetary Campaign. Monetary campaigns will submit an offer via SMS, Email, and/or App directly to the registered customer!
  
  <a id="apendex"></a>
- ## Apendex
+ ## Appendix
  
  Below are additional resources for other endpoints (look up a customer for future purchases, etc.)
  
@@ -134,12 +131,12 @@ To register a customer for loyalty, utilize a `POST` to the [v1/Customers](http:
  * [Get Receipt by ReceiptID](http://engage-cert.monetary.co/swagger/ui/index#!/Receipts/Receipts_Get_0)
  
  ## (Advanced) Campaign Specific Actions
- If your point of sale has it's own marketing strategy, but you would like to utilize the same notification and offers Monetary's automated campaigns generate,  you can also utilize the monetary Campaign endpoint. These endpoints create manual campaigns. Manual campaigns are ways to deliver offers (coupons, discounts, etc) to registered customers via POST to the Campaigns/Offers. Follow these easy steps to create and send offers to registered customers:
+ If your point of sale has its own marketing strategy, but you would like to utilize the same notification and offers Monetary's automated campaigns generate,  you can also utilize the monetary Campaign endpoint. These endpoints create manual campaigns. Manual campaigns are ways to deliver offers (coupons, discounts, etc.) to registered customers via POST to the Campaigns/Offers. Follow these easy steps to create and send offers to registered customers:
  
  ### 1. Create a Manual Campaign
  Submit a payload describing the offer you would like to send to registered customers. There are two endpoints that take and respond with the same payload:
  ##### Campaigns/Location
- Post here if you want an offer to only be used at a single location in a franchise/marketing group. It also Limits offers to only registered customers who have made a purchase at the location specified by the api key.
+ Post here if you want an offer to only be used at a single location in a franchise/marketing group. It also Limits offers to only registered customers who have made a purchase at the location specified by the API key.
  ##### Campaigns/Group
  Post here if you want an offer to be available/redeemable at any location in the franchise/marketing group. Any registered customer can receive and redeem an offer generated with this campaign. Only the holding business is authorized to create group level campaigns.
  
@@ -164,7 +161,7 @@ To register a customer for loyalty, utilize a `POST` to the [v1/Customers](http:
 }
  ```
  ### 2. Submit Customer List to Generate Offers
- once you have the CampaignID, you can utilise the `Campaigns/{CampaignID}/Offers` endpoint to submit a list of CustomerID identifiers for the registered customers who should receive the offer:
+ once you have the CampaignID, you can utilize the `Campaigns/{CampaignID}/Offers` endpoint to submit a list of CustomerID identifiers for the registered customers who should receive the offer:
  #### Example Request
  ```
  [101,345,332]
@@ -172,4 +169,4 @@ To register a customer for loyalty, utilize a `POST` to the [v1/Customers](http:
  #### Example Response
  `204` Request accepted (no content)
  
- Once we receive the list of customers, we determine if the list of customers can receive an offer for the given CampaignID (i.e: if the campaign is location specific, and if the customers in the list have made a purchase at the given location). 
+ Once we receive the list of customers, we determine if the list of customers can receive an offer for the given CampaignID (i.e. if the campaign is location specific, and if the customers in the list have made a purchase at the given location). 
