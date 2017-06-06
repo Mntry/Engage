@@ -21,25 +21,8 @@ The Engage only utilizes Content-Type: `application/json`
 
 ### 2. Register Customer for Loyalty
 
-To register a customer for loyalty, utilize a `POST` to the [v1/Customers](http://engage-cert.monetary.co/swagger/ui/index#!/Customers/Customers_Post) endpoint.
+To register a customer for loyalty, utilize a `POST` to the [v1/Customers](https://engage-cert.monetary.co/swagger/ui/index#!/Customers/Customers_Post) endpoint.
 
-#### Example Customer Registration Request:
-```
-{
-  "ExternalID": "LOTR4",
-  "Phone": "5551231234",
-  "Email": "bbaggens@fictionalEmail.com",
-  "FirstName": "Bob",
-  "LastName": "Baggens",
-  "Address": "123 Fake Street",
-  "City": "Durango",
-  "State": "CO",
-  "Zipcode": "81303",
-  "Birthday": "2017-04-20",
-  "AcceptsSMS": true,
-  "AcceptsEmail": true
-}
-```
 #### Example Customer Registration Request:
 ```
 {
@@ -60,7 +43,7 @@ To register a customer for loyalty, utilize a `POST` to the [v1/Customers](http:
  ```
  ### 3. Submit a Receipt
  
- To make complex marketing decisions based upon customer buying patterns, we just need the basic receipt data. `PSOT` this receipt data to the [v1/Receipts](http://engage-cert.monetary.co/swagger/ui/index#!/Receipts/Receipts_Post) endpoint.
+ To make complex marketing decisions based upon customer buying patterns, we just need the basic receipt data. `PSOT` this receipt data to the [v1/Receipts](https://engage-cert.monetary.co/swagger/ui/index#!/Receipts/Receipts_Post) endpoint.
  
  #### Example Receipt Request:
  ```
@@ -114,21 +97,21 @@ To register a customer for loyalty, utilize a `POST` to the [v1/Customers](http:
  Below are additional resources for other endpoints (look up a customer for future purchases, etc.)
  
  ### Customer Specific Actions:
- * [Search Registered Customers](http://engage-cert.monetary.co/swagger/ui/index#!/Customers/Customers_Get)
- * [Register Customer](http://engage-cert.monetary.co/swagger/ui/index#!/Customers/Customers_Post)
- * [Retrieve Single Customer](http://engage-cert.monetary.co/swagger/ui/index#!/Customers/Customers_Get_0)
- * [Update a Registered Customer](http://engage-cert.monetary.co/swagger/ui/index#!/Customers/Customers_Put)
- * [Retrieve Customer Offers](http://engage-cert.monetary.co/swagger/ui/index#!/Customers/Customers_GetOffers)
- * [Retrieve Customer Receipt Data that has been submitted](http://engage-cert.monetary.co/swagger/ui/index#!/Customers/Customers_GetReceipts)
+ * [Search Registered Customers](https://engage-cert.monetary.co/swagger/ui/index#!/Customers/Customers_Get)
+ * [Register Customer](https://engage-cert.monetary.co/swagger/ui/index#!/Customers/Customers_Post)
+ * [Retrieve Single Customer](https://engage-cert.monetary.co/swagger/ui/index#!/Customers/Customers_Get_0)
+ * [Update a Registered Customer](https://engage-cert.monetary.co/swagger/ui/index#!/Customers/Customers_Put)
+ * [Retrieve Customer Offers](https://engage-cert.monetary.co/swagger/ui/index#!/Customers/Customers_GetOffers)
+ * [Retrieve Customer Receipt Data that has been submitted](https://engage-cert.monetary.co/swagger/ui/index#!/Customers/Customers_GetReceipts)
  
  ### Offer Specific Actions
- * [Get Offer by Code](http://engage-cert.monetary.co/swagger/ui/index#!/Offers/Offers_Get)
- * [Get Offer by id](http://engage-cert.monetary.co/swagger/ui/index#!/Offers/Offers_Get_0)
+ * [Get Offer by Code](https://engage-cert.monetary.co/swagger/ui/index#!/Offers/Offers_Get)
+ * [Get Offer by id](https://engage-cert.monetary.co/swagger/ui/index#!/Offers/Offers_Get_0)
  
  ### Receipt Specific Actions
- * [Search Receipt Data](http://engage-cert.monetary.co/swagger/ui/index#!/Receipts/Receipts_Get)
- * [Submit Receipt Data](http://engage-cert.monetary.co/swagger/ui/index#!/Receipts/Receipts_Post)
- * [Get Receipt by ReceiptID](http://engage-cert.monetary.co/swagger/ui/index#!/Receipts/Receipts_Get_0)
+ * [Search Receipt Data](https://engage-cert.monetary.co/swagger/ui/index#!/Receipts/Receipts_Get)
+ * [Submit Receipt Data](https://engage-cert.monetary.co/swagger/ui/index#!/Receipts/Receipts_Post)
+ * [Get Receipt by ReceiptID](https://engage-cert.monetary.co/swagger/ui/index#!/Receipts/Receipts_Get_0)
  
  ## (Advanced) Campaign Specific Actions
  If your point of sale has its own marketing strategy, but you would like to utilize the same notification and offers Monetary's automated campaigns generate,  you can also utilize the monetary Campaign endpoint. These endpoints create manual campaigns. Manual campaigns are ways to deliver offers (coupons, discounts, etc.) to registered customers via POST to the Campaigns/Offers. Follow these easy steps to create and send offers to registered customers:
@@ -139,7 +122,6 @@ To register a customer for loyalty, utilize a `POST` to the [v1/Customers](http:
  Post here if you want an offer to only be used at a single location in a franchise/marketing group. It also Limits offers to only registered customers who have made a purchase at the location specified by the API key.
  ##### Campaigns/Group
  Post here if you want an offer to be available/redeemable at any location in the franchise/marketing group. Any registered customer can receive and redeem an offer generated with this campaign. Only the holding business is authorized to create group level campaigns.
- 
  
  #### Example Request
  ```
